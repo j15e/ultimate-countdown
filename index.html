@@ -1,0 +1,26 @@
+<link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+<style type="text/css">
+  body 
+  {
+    font-family: 'Iceland', cursive;
+    font-size:400px;
+    text-align:center;
+    background:url('http://25.media.tumblr.com/tumblr_lvh7gniYEs1qlzduwo1_r4_250.gif');
+    color:white;
+  }
+  #progress
+  {
+    height:300px;
+    background:url('http://www.jazzonfire.com/files/QuickSiteImages/Animated_20Flames.gif') bottom;
+  }
+</style>
+<div id="timer">900</div>
+<div id="progress"></div>
+<script>
+var timer = document.getElementById('timer')
+var start = parseInt(timer.innerText)
+setInterval(function(){
+  timer.innerText = parseInt(timer.innerText)-1
+  document.getElementById('progress').style.width = parseFloat((timer.innerText/start)*100)+'%'
+}, 1000)
+</script>
