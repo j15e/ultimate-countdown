@@ -28,7 +28,7 @@
 <div id="progress"><div id="message">OVER!</div></div>
 <script>
 var timer = document.getElementById('timer'), start
-timer.innerText = (start = (window.location.hash || "900#").replace(/^#/, ""))
+timer.innerText = (start = (window.location.hash.replace(/^#/, "") || "900"))
 setInterval(function(){
   timer.innerText = parseInt(timer.innerText)-1
   progress = parseFloat((timer.innerText/start))
