@@ -32,7 +32,6 @@ timer.innerText = (start = (window.location.hash || "900#").replace(/^#/, ""))
 setInterval(function(){
   timer.innerText = parseInt(timer.innerText)-1
   progress = parseFloat((timer.innerText/start))
-  console.log(progress)
   if (progress > 0) { document.getElementById('progress').style.bottom = (-300 * progress)+"px" }
   else { document.getElementById('progress').style.height = "100%"; document.getElementById("message").style.display = "block" }
 }, 1000)
